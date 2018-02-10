@@ -5,7 +5,7 @@ class FoursquareService
       req.params['client_id'] = client_id
       req.params['client_secret'] = client_secret
       req.params['grant_type'] = 'authorization_code'
-      req.params['redirect_uri'] = "http://localhost:3000/auth"
+      req.params['redirect_uri'] = "http://192.241.157.192:47210/auth"
       req.params['code'] = code
     end
     body = JSON.parse(resp.body)
@@ -19,5 +19,5 @@ class FoursquareService
     end
     JSON.parse(resp.body)["response"]["friends"]["items"]
   end
-  
+
 end
